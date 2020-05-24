@@ -21,7 +21,7 @@
 /* Begin PBXFileReference section */
 		9045D405247A8E5A00F08EF5 /* AboutAuthorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAuthorViewController.swift; sourceTree = "<group>"; };
 		9045D407247A99DB00F08EF5 /* BullsEye.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = BullsEye.html; sourceTree = "<group>"; };
-		90CB470C247A294A00A82C7B /* ElephantsEye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ElephantsEye.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		90CB470C247A294A00A82C7B /* Elephant's Eye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Elephant's Eye.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		90CB470F247A294A00A82C7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90CB4711247A294A00A82C7B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		90CB4713247A294A00A82C7B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,7 +54,7 @@
 		90CB470D247A294A00A82C7B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				90CB470C247A294A00A82C7B /* ElephantsEye.app */,
+				90CB470C247A294A00A82C7B /* Elephant's Eye.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -93,7 +93,7 @@
 			);
 			name = ElephantsEye;
 			productName = ElephantsEye;
-			productReference = 90CB470C247A294A00A82C7B /* ElephantsEye.app */;
+			productReference = 90CB470C247A294A00A82C7B /* Elephant's Eye.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -304,7 +304,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.puneetpugalia.ElephantsEye;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Elephant's Eye";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -322,7 +322,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.puneetpugalia.ElephantsEye;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Elephant's Eye";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
