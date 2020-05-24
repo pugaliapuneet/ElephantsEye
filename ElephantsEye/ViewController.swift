@@ -10,11 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var currentValue:Int = 0
-    var targetValue:Int = 0
+    var currentValue = 0
+    var targetValue = 0
+    var score = 0
+    var round = 0
     
     @IBOutlet weak var slider:UISlider!
     @IBOutlet weak var targetLabel:UILabel!
+    @IBOutlet weak var scoreLabel:UILabel!
+    @IBOutlet weak var roundLabel:UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,10 +29,36 @@ class ViewController: UIViewController {
 
     @IBAction func showAlert() {
         
-        let message = "The value of the slider is \(currentValue)" +
-        "\nThe target value is \(targetValue)"
+        var points:Int
+        let difference:Int
         
-        let alert = UIAlertController(title: "Hello, World!", message: message, preferredStyle: .alert)
+        difference = abs(currentValue - targetValue)
+        points = 100 - difference
+        
+        score += points
+        
+        let title:String
+        
+        if difference == 0 {
+            title = "Perfect!"
+            points += 100
+        }
+        else if difference < 5 {
+            title = "You almost had it!"
+            if difference == 1 {
+                points += 50
+            }
+        }
+        else if difference < 10 {
+            title = "Pretty good!"
+        }
+        else {
+            title = "Not even close..."
+        }
+        
+        let message = "You scored \(points) points."
+        
+        let alert = UIAlertController(title: "\(title)", message: message, preferredStyle: .alert)
         
         let action = UIAlertAction(title: "Awesome", style: .default, handler: nil)
         
@@ -44,6 +74,7 @@ class ViewController: UIViewController {
     }
     
     func startNewRound() {
+        round += 1
         targetValue = Int.random(in: 1...100)
         currentValue = 50
         slider.value = Float(currentValue)
@@ -52,6 +83,8 @@ class ViewController: UIViewController {
     
     func updateLabels() {
         targetLabel.text = String(targetValue)
+        scoreLabel.text = String(score)
+        roundLabel.text = String(round)
     }
 
 }
