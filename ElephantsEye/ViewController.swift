@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         currentValue = Int(slider.value.rounded())
-        startNewRound()
+        startNewGame()
     }
 
     @IBAction func showAlert() {
@@ -59,13 +59,18 @@ class ViewController: UIViewController {
         let message = "You scored \(points) points."
         
         let alert = UIAlertController(title: "\(title)", message: message, preferredStyle: .alert)
-        
-        let action = UIAlertAction(title: "Awesome", style: .default, handler: nil)
-        
+        let action = UIAlertAction(title: "Awesome", style: .default, handler: {
+            action in
+            self.startNewRound()
+        })
         alert.addAction(action)
         
         present(alert, animated: true, completion: nil)
-        
+    }
+    
+    @IBAction func startNewGame() {
+        score = 0
+        round = 0
         startNewRound()
     }
     
